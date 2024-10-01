@@ -1,0 +1,52 @@
+.model small
+.data
+num1 db ?
+num2 db ?
+result db ?
+msg1 db "Enter the first number: $"
+msg2 db 10d, 0Dh, "Enter the second number: $"
+resultMsg db 10d, 13d, "Sum: $"
+
+.code
+mov ax, @data
+mov ds, ax
+
+mov ah, 09h
+lea dx, msg1
+int 21h
+
+; Read the first number
+mov ah, 01h
+int 21h
+sub al, 48d
+mov num1, al
+
+; Prompt the user for the second number
+mov ah, 09h
+lea dx, msg2
+int 21h
+
+; Read the second number
+mov ah, 01h
+int 21h
+sub al, 30h
+mov num2, al
+
+; Calculate the sum
+mov al, num1
+add al, num2
+mov result, al
+
+; Display the result
+mov ah, 09h
+lea dx, resultMsg
+int 21h
+
+mov dl, result
+add dl, '0'
+mov ah, 02h
+int 21h
+
+mov ah, 4Ch
+int 21h
+

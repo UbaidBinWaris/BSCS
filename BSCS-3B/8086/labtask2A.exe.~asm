@@ -1,0 +1,48 @@
+.model small
+.data
+name1 db 'M', 0
+name2 db 'a', 0
+name3 db 'r', 0
+name4 db 'y', 0
+name5 db 'a', 0
+name6 db 'm', 0
+name7 db ' ', 0
+name8 db 'S', 0
+name9 db 'h', 0
+name10 db 'a', 0
+name11 db 'z', 0
+endMsg db '$'
+.code
+main:
+mov ax, @data
+mov ds, ax
+mov ah, 02h
+mov dl, name1
+int 21h
+mov dl, name2
+int 21h
+mov dl, name3
+int 21h
+mov dl, name4
+int 21h
+mov dl, name5
+int 21h
+mov dl, name6
+int 21h
+mov dl, name7
+int 21h
+mov dl, name8
+int 21h
+mov dl, name9
+int 21h
+mov dl, name10
+int 21h
+mov dl, name11
+int 21h
+mov dl, endMsg
+int 21h
+
+mov ah, 4Ch
+int 21h
+
+
