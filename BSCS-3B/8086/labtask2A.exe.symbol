@@ -1,0 +1,23 @@
+< THE SYMBOL TABLE >  labtask2A.exe  --  emu8086 assembler version: 4.08 
+===================================================================================================
+Name                     	Offset    	Size      	Type      	Segment   
+===================================================================================================
+DATA                     	00000     	-5        	SEGMENT   	(ITSELF)  
+NAME1                    	00000     	1         	VAR       	data      
+NAME2                    	00002     	1         	VAR       	data      
+NAME3                    	00004     	1         	VAR       	data      
+NAME4                    	00006     	1         	VAR       	data      
+NAME5                    	00008     	1         	VAR       	data      
+NAME6                    	0000A     	1         	VAR       	data      
+NAME7                    	0000C     	1         	VAR       	data      
+NAME8                    	0000E     	1         	VAR       	data      
+NAME9                    	00010     	1         	VAR       	data      
+NAME10                   	00012     	1         	VAR       	data      
+NAME11                   	00014     	1         	VAR       	data      
+ENDMSG                   	00016     	1         	VAR       	data      
+CODE                     	00002     	-5        	SEGMENT   	(ITSELF)  
+MAIN                     	00000     	-1        	LABEL     	code      
+===================================================================================================
+[ 3/11/2024  --  9:48:41 PM ] 
+< END >
+ 
