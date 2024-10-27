@@ -1,0 +1,43 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel dx="1194" dy="824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="go56Lrlr8OW-n8DFi2HJ-46" value="Schedule" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="690" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="go56Lrlr8OW-n8DFi2HJ-47" value="Courses" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="go56Lrlr8OW-n8DFi2HJ-48" value="Classroom" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="go56Lrlr8OW-n8DFi2HJ-49" value="Enrollments" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="go56Lrlr8OW-n8DFi2HJ-50" value="Faculty" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="950" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="go56Lrlr8OW-n8DFi2HJ-51" value="Department" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="890" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="go56Lrlr8OW-n8DFi2HJ-52" value="Fee" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="go56Lrlr8OW-n8DFi2HJ-53" value="Library" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="810" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="go56Lrlr8OW-n8DFi2HJ-54" value="Student" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="go56Lrlr8OW-n8DFi2HJ-57" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="go56Lrlr8OW-n8DFi2HJ-52">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="190" y="710" as="sourcePoint" />
+            <mxPoint x="290" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
