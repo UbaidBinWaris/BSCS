@@ -1,4 +1,4 @@
--- create database university_database;
+create database university_database;
 
 use university_database;
 
@@ -891,7 +891,7 @@ INSERT INTO classrooms (room_id, room_number, building, capacity) VALUES
 (2, '102', 'Arts Building', 25),
 (3, '103', 'Business Center', 50),
 (4, '104', 'Math Hall', 35),
-(5, '105', 'Physics Lab', 20);
+(5, '105', 'Physics Lab', 20),
 (6, '106', 'Engineering Building', 40),
 (7, '107', 'Library', 15),
 (8, '108', 'Computer Lab', 30),
