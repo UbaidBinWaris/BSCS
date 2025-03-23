@@ -1,0 +1,91 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.1.1 Chrome/132.0.6834.210 Electron/34.3.3 Safari/537.36" version="26.1.1">
+  <diagram name="Page-1" id="F_83VQ1V6R_viOOjAXjW">
+    <mxGraphModel dx="1194" dy="824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0XQAD88S7VwPFk4PXXPq-6" target="0XQAD88S7VwPFk4PXXPq-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0XQAD88S7VwPFk4PXXPq-6" target="0XQAD88S7VwPFk4PXXPq-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0XQAD88S7VwPFk4PXXPq-6" target="0XQAD88S7VwPFk4PXXPq-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0XQAD88S7VwPFk4PXXPq-6" target="0XQAD88S7VwPFk4PXXPq-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0XQAD88S7VwPFk4PXXPq-6" target="0XQAD88S7VwPFk4PXXPq-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-6" value="Student" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="242.5" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0XQAD88S7VwPFk4PXXPq-11" target="0XQAD88S7VwPFk4PXXPq-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0XQAD88S7VwPFk4PXXPq-11" target="0XQAD88S7VwPFk4PXXPq-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0XQAD88S7VwPFk4PXXPq-11" target="0XQAD88S7VwPFk4PXXPq-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0XQAD88S7VwPFk4PXXPq-11" target="0XQAD88S7VwPFk4PXXPq-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-11" value="Library Staff" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="502.5" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-12" value="Admin&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="740" y="747.5" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-13" value="Borrow book" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="332.5" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-14" value="Loan Books" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="552.5" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-15" value="Login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="392.5" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-16" value="view Avability" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="212.5" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-17" value="Search book" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="92.5" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-18" value="Issue Remainder for overdue books" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="760" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-19" value="reserve book" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="272.5" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-20" value="Track Book Reservations" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="612.5" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-21" value="Retuen Book" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="152.5" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-22" value="Manage Inventory" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="492.5" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.019;entryY=0.34;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="0XQAD88S7VwPFk4PXXPq-6" target="0XQAD88S7VwPFk4PXXPq-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.006;entryY=0.72;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="0XQAD88S7VwPFk4PXXPq-11" target="0XQAD88S7VwPFk4PXXPq-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.7;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="0XQAD88S7VwPFk4PXXPq-12" target="0XQAD88S7VwPFk4PXXPq-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-26" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="265" y="50" width="320" height="822.5" as="geometry" />
+        </mxCell>
+        <mxCell id="0XQAD88S7VwPFk4PXXPq-27" value="Update Book status" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="680" width="160" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
