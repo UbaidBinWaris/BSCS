@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/main/java/com/example/userdao/Student.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/com/example/userdao/Student.java" />
+              <option name="updatedContent" value="package com.example.userdao;&#10;&#10;public class Student {&#10;    private int student_id;&#10;    private String name;&#10;    private double semester_gpa;&#10;    private double cumulative_gpa;&#10;    private String email;&#10;&#10;    public Student(int student_id, String name, double semester_gpa, double cumulative_gpa, String email) {&#10;        this.student_id = student_id;&#10;        this.name = name;&#10;        this.semester_gpa = semester_gpa;&#10;        this.cumulative_gpa = cumulative_gpa;&#10;        this.email = email;&#10;    }&#10;&#10;    public int getStudent_id() { return student_id; }&#10;    public String getName() { return name; }&#10;    public double getSemester_gpa() { return semester_gpa; }&#10;    public double getCumulative_gpa() { return cumulative_gpa; }&#10;    public String getEmail() { return email; }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

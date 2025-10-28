@@ -1,0 +1,40 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- PostgreSQL Database Connection Settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hibernate_demo</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">password</property>
+
+        <!-- PostgreSQL Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Show SQL statements -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Automatically create/update database schema -->
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+
+        <!-- Connection pool settings -->
+        <property name="hibernate.connection.pool_size">10</property>
+
+        <!-- Current session context -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- PostgreSQL specific settings -->
+        <property name="hibernate.connection.autocommit">false</property>
+        <property name="hibernate.jdbc.batch_size">20</property>
+        <property name="hibernate.order_inserts">true</property>
+        <property name="hibernate.order_updates">true</property>
+
+        <!-- Entity mappings -->
+        <mapping class="com.example.entity.User"/>
+        <mapping class="com.example.entity.Product"/>
+
+    </session-factory>
+</hibernate-configuration>
