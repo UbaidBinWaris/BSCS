@@ -1,0 +1,29 @@
+{
+    // Disable GitHub Copilot inline suggestions (blue lines)
+    "github.copilot.enable": false,
+    "github.copilot.editor.enableAutoCompletions": false,
+    "github.copilot.inlineSuggest.enable": false,
+    
+    // Disable all inline suggestions
+    "editor.inlineSuggest.enabled": false,
+    
+    // Disable bracket pair guides that might show blue lines
+    "editor.bracketPairColorization.enabled": false,
+    "editor.guides.bracketPairs": false,
+    "editor.guides.bracketPairsHorizontal": false,
+    
+    // Disable indent guides
+    "editor.guides.indentation": false,
+    "editor.renderIndentGuides": false,
+    
+    // Disable other visual guides that might appear as lines
+    "editor.rulers": [],
+    "editor.renderWhitespace": "none",
+    "editor.guides.highlightActiveIndentation": false,
+    
+    // Disable AI-related features from other extensions
+    "tabnine.disable_automatic_completion": true,
+    "codeium.enableConfig": {
+        "*": false
+    }
+}
