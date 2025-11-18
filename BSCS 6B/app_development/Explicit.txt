@@ -1,0 +1,36 @@
+Intent intent=new Intent(this, SecondActivity.class);
+startActivity(intent);
+
+
+Intent intent=new Intent(this, SecondActivity.class);
+intent.putExtra("v1", "Some Value");
+intent.putExtra("v2", "Another Value");
+startActivity(intent);
+
+
+
+Start Second Activity For Result:
+
+Intent intent=new Intent(this, SecondActivity.class);
+startActivityForResult(intent, 2);
+
+Send Results From Second Activity
+String message=editText1.getText().toString();
+Intent intent=new Intent();
+intent.putExtra("MESSAGE",message);
+setResult(2,intent);
+finish(); 
+
+
+Get Result in First Activity
+ @Override
+ protected void onActivityResult(int requestCode, int resultCode, Intent data)
+ {
+ super.onActivityResult(requestCode, resultCode, data);
+ // check if the request code is same as what is passed
+ if(requestCode==2)
+ {
+ }
+ String message=data.getStringExtra("MESSAGE");
+ . . .
+ }
