@@ -26,19 +26,18 @@ public class UserController extends HttpServlet {
 	HttpSession session = null;
 	private int role_id;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response)
+
+    protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 
 		kase = (String) request.getAttribute("kase");
 
-		if (kase.equals("auth")) {
+		if ("auth".equals(kase)) {
 
-			// session = request.getSession();
-			if (session != null) {
-				if (!session.getAttribute("UserName").toString().equals(null)) {
-					request.getRequestDispatcher("/user/welcome").forward(request, response);
-				}
+			HttpSession session = request.getSession(false);
+			if (session != null && session.getAttribute("UserName") != null) {
+				request.getRequestDispatcher("/user/welcome").forward(request, response);
 			} else {
 				username = request.getParameter("username");
 				password = request.getParameter("password");
@@ -64,9 +63,10 @@ public class UserController extends HttpServlet {
 			}
 		}
 		// edit this portion
-		else if (kase.equals("login")) {
+		else if ("login".equals(kase)) {
 			System.out.println("Inside Login Case");
-			if (session != null) {
+			HttpSession session = request.getSession(false);
+			if (session != null && session.getAttribute("UserName") != null) {
 				request.getRequestDispatcher("/WEB-INF/jsps/user.welcome.jsp").forward(request, response);
 			}
 
@@ -75,27 +75,40 @@ public class UserController extends HttpServlet {
 			}
 
 		}
-		else if(kase.equals("setting")){
+		else if("setting".equals(kase)) {
 			view="/WEB-INF/jsps/user.setting.jsp";
-			if(session != null){
+			HttpSession session = request.getSession(false);
+			if(session != null && session.getAttribute("UserName") != null){
 				request.getRequestDispatcher("/WEB-INF/jsps/user.setting.jsp").forward(request, response);
 			}
 			else {
 				request.getRequestDispatcher("/WEB-INF/jsps/user.login.jsp").forward(request, response);
 			}
 		}
-
-		else if (kase.equals("logout")) {
-			view = "/WEB-INF/jsps/user.login.jsp";
-			session.invalidate();
-			session = null;
-			response.sendRedirect("login");
-
-		} else {
-			System.out.println("not of the Usercontroller cases are fired");
+		else if("welcome".equals(kase)) {
+			HttpSession session = request.getSession(false);
+			if(session != null && session.getAttribute("UserName") != null){
+				request.getRequestDispatcher("/WEB-INF/jsps/user.welcome.jsp").forward(request, response);
+			}
+			else {
+				request.getRequestDispatcher("/WEB-INF/jsps/user.login.jsp").forward(request, response);
+			}
 		}
-		System.out.println("User Controller End");
 
-	}
+		else if ("logout".equals(kase)) {
+				view = "/WEB-INF/jsps/user.login.jsp";
+				HttpSession session = request.getSession(false);
+				if (session != null) {
+					session.invalidate();
+				}
+				response.sendRedirect("login");
+
+			} else {
+				System.out.println("not of the Usercontroller cases are fired");
+				System.out.println("not of the Usercontroller cases are fired");
+			}
+			System.out.println("User Controller End");
+
+		}
 
 }

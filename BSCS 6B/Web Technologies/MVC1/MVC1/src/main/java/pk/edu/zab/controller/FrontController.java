@@ -19,27 +19,39 @@ public class FrontController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// controller = "none";
-		System.out.println("Url: " + request.getRequestURI());
+		System.out.println("Url: " + request.getRequestURL());
 
-		String url = resolveUrl(request.getRequestURI());
+		System.out.println("Context Path: " + request.getContextPath());
+		System.out.println("Servlet Path: " + request.getServletPath());
+
+		// Use servlet path (without context path) for URL resolution
+		String uri = request.getServletPath();
+		if (uri == null || uri.isEmpty()) {
+			uri = request.getRequestURI().substring(request.getContextPath().length());
+		}
+		System.out.println("URI for parsing: " + uri);
+
+		String url = resolveUrl(uri);
 
 		System.out.println("Controller after resolveUrl: " + controller);
 		System.out.println("View after resolveUrl: " + view);//////////
 		if (url == null) {
 			view = "/WEB-INF/jsps/error.jsp?" + request.getRequestURI();// goto
-																		// error
-																		// page
-																		// with
-																		// typed
-																		// url
+						// error
+						// page
+						// with
+						// typed
+						// url
 			System.out.println("This is view: " + view);
 			System.out.println("resolve URL returned null");
+			request.getRequestDispatcher(view).forward(request, response);
+			return;
 		} else if (url.equals("/")) {
 			System.out.println("homepage case");
 			view = "/WEB-INF/jsps/user.login.jsp";
 		
 		} else {
-			if (controller.equals("public")) {
+			if (controller != null && controller.equals("public")) {
 				view = "/WEB-INF/pub/" + url + ".jsp";
 			} else {
 				view = "/WEB-INF/jsps/" + url + ".jsp";
@@ -48,13 +60,17 @@ public class FrontController extends HttpServlet {
 		}
 
 		// need to invoke the relative controller here
-		if (controller.equals("home")) {
+		if (controller == null) {
+			System.out.println("Controller is null, cannot dispatch");
+			view = "/WEB-INF/jsps/error.jsp";
+			request.getRequestDispatcher(view).forward(request, response);
+		} else if (controller.equals("home")) {
 			request.setAttribute("view", view);
 			dispatch = request.getRequestDispatcher("/HomeController");
 			dispatch.forward(request, response);
 		}else if(controller.equals("admin")){
 			request.setAttribute("view", view);
-			request.setAttribute(kase, kase);
+			request.setAttribute("kase", kase);
 			dispatch = request.getRequestDispatcher("/AdminContoller");
 			dispatch.forward(request, response);
 		}
@@ -63,6 +79,13 @@ public class FrontController extends HttpServlet {
 			request.setAttribute("kase", kase);
 			dispatch = request.getRequestDispatcher("/UserController");
 			dispatch.forward(request, response);
+		} else if (controller.equals("public")) {
+			// For public pages, directly forward to JSP
+			System.out.println("Public page request: " + view);
+			view = "/WEB-INF/jsps/" + kase + ".jsp";
+			System.out.println("Forwarding to: " + view);
+			request.getRequestDispatcher(view).forward(request, response);
+			return;
 		} else if (controller.equals("static")) {
 			System.out.println("Its a static resource");
 			RequestDispatcher rd = getServletContext().getNamedDispatcher("default");
