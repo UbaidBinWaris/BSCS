@@ -14,7 +14,6 @@
     
     // Disable indent guides
     "editor.guides.indentation": false,
-    "editor.renderIndentGuides": false,
     
     // Disable other visual guides that might appear as lines
     "editor.rulers": [],
