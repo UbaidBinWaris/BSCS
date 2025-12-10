@@ -26,7 +26,18 @@ a{
  margin-top: 10px;
  display: block;
 }
-
+.aws-link {
+ color: #00bfff !important;
+ font-size: 24px;
+ margin-top: 10px;
+ display: block;
+}
+.signup-link {
+ color: #00ff00 !important;
+ font-size: 24px;
+ margin-top: 10px;
+ display: block;
+}
 
 </style>
 	<title>MVC1 - Main Menu</title>
@@ -36,9 +47,12 @@ a{
 
 <a href="user/login">Login</a><br>
 <br>
+<a href="user/signup" class="signup-link">Sign Up</a>
+<br>
 <a href="admin/login">Admin page</a>
 <br><br>
 <a href="public/documentation" class="doc-link">View Documentation</a>
 <a href="public/deployment" class="deploy-link">Deployment Guide</a>
+<a href="public/aws_rds" class="aws-link">AWS RDS & EC2 Setup</a>
 </body>
 </html>

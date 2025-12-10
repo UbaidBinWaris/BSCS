@@ -15,7 +15,8 @@ public class DbUtil {
             try {
 
             	String driver = "org.postgresql.Driver";
-            	String url = "jdbc:postgresql://127.0.0.1:5432/web_database";
+            	String url = "jdbc:postgresql://databas.c7u228yiax78.eu-north-1.rds.amazonaws.com:5432/web_database";
+                //String url = "jdbc:postgresql://localhost:5432/web_database";
             	String user = "web_user";
             	String password = "web_password";
                 Class.forName(driver);

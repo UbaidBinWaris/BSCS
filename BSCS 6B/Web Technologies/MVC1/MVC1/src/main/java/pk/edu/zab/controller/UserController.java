@@ -75,6 +75,122 @@ public class UserController extends HttpServlet {
 			}
 
 		}
+		else if ("signup".equals(kase)) {
+			System.out.println("Inside Signup Case");
+			request.getRequestDispatcher("/WEB-INF/jsps/user.signup.jsp").forward(request, response);
+		}
+		else if ("register".equals(kase)) {
+			System.out.println("Inside Register Case - Processing Signup");
+			
+			// Get form parameters
+			String username = request.getParameter("username");
+			String password = request.getParameter("password");
+			String email = request.getParameter("email");
+			String fname = request.getParameter("fname");
+			
+			// Validation
+			StringBuilder errorMessages = new StringBuilder();
+			
+			// Validate username
+			if (username == null || username.trim().isEmpty()) {
+				errorMessages.append("Username is required. ");
+			} else if (username.length() < 3 || username.length() > 50) {
+				errorMessages.append("Username must be between 3 and 50 characters. ");
+			} else if (!username.matches("^[a-zA-Z0-9_]+$")) {
+				errorMessages.append("Username can only contain letters, numbers, and underscores. ");
+			}
+			
+			// Validate password
+			if (password == null || password.trim().isEmpty()) {
+				errorMessages.append("Password is required. ");
+			} else if (password.length() < 6 || password.length() > 100) {
+				errorMessages.append("Password must be between 6 and 100 characters. ");
+			}
+			
+			// Validate email
+			if (email == null || email.trim().isEmpty()) {
+				errorMessages.append("Email is required. ");
+			} else if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")) {
+				errorMessages.append("Invalid email format. ");
+			} else if (email.length() > 100) {
+				errorMessages.append("Email is too long. ");
+			}
+			
+			// Validate full name
+			if (fname == null || fname.trim().isEmpty()) {
+				errorMessages.append("Full name is required. ");
+			} else if (fname.length() < 2 || fname.length() > 100) {
+				errorMessages.append("Full name must be between 2 and 100 characters. ");
+			} else if (!fname.matches("^[a-zA-Z\\s]+$")) {
+				errorMessages.append("Full name can only contain letters and spaces. ");
+			}
+			
+			// If validation fails, redirect back with error message
+			if (errorMessages.length() > 0) {
+				System.out.println("Validation errors: " + errorMessages.toString());
+				request.setAttribute("error", errorMessages.toString());
+				request.setAttribute("username", username);
+				request.setAttribute("email", email);
+				request.setAttribute("fname", fname);
+				request.getRequestDispatcher("/WEB-INF/jsps/user.signup.jsp").forward(request, response);
+				return;
+			}
+			
+			// Sanitize inputs (trim whitespace)
+			username = username.trim();
+			email = email.trim();
+			fname = fname.trim();
+			
+			// Create new user model
+			UserModel newUser = new UserModel();
+			newUser.setUser(username);
+			newUser.setPass(password);
+			newUser.setEmail(email);
+			newUser.setFname(fname);
+			
+			// Save to database
+			UserDAO ud = new UserDAO();
+			try {
+				// Check duplicates first
+				String exists = ud.existsUsernameOrEmail(username, email);
+				if ("username".equals(exists)) {
+					request.setAttribute("error", "Registration failed. Username already exists.");
+					request.setAttribute("username", username);
+					request.setAttribute("email", email);
+					request.setAttribute("fname", fname);
+					request.getRequestDispatcher("/WEB-INF/jsps/user.signup.jsp").forward(request, response);
+					return;
+				} else if ("email".equals(exists)) {
+					request.setAttribute("error", "Registration failed. Email already registered.");
+					request.setAttribute("username", username);
+					request.setAttribute("email", email);
+					request.setAttribute("fname", fname);
+					request.getRequestDispatcher("/WEB-INF/jsps/user.signup.jsp").forward(request, response);
+					return;
+				} else if ("exists".equals(exists)) {
+					request.setAttribute("error", "Registration failed. User or email already exists.");
+					request.setAttribute("username", username);
+					request.setAttribute("email", email);
+					request.setAttribute("fname", fname);
+					request.getRequestDispatcher("/WEB-INF/jsps/user.signup.jsp").forward(request, response);
+					return;
+				}
+				// proceed to insert
+				ud.addUser(newUser);
+				System.out.println("User registered successfully: " + username);
+				
+				// Set success message and redirect to login
+				request.setAttribute("message", "Registration successful! Please login.");
+				request.getRequestDispatcher("/WEB-INF/jsps/user.login.jsp").forward(request, response);
+			} catch (Exception e) {
+				System.out.println("Error registering user: " + e.getMessage());
+				request.setAttribute("error", "Registration failed. Please try again later.");
+				request.setAttribute("username", username);
+				request.setAttribute("email", email);
+				request.setAttribute("fname", fname);
+				request.getRequestDispatcher("/WEB-INF/jsps/user.signup.jsp").forward(request, response);
+			}
+		}
 		else if("setting".equals(kase)) {
 			view="/WEB-INF/jsps/user.setting.jsp";
 			HttpSession session = request.getSession(false);
