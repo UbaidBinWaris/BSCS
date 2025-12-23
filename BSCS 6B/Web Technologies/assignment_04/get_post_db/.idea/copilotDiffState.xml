@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/build.gradle.kts">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/build.gradle.kts" />
+              <option name="originalContent" value="plugins {&#10;    java&#10;    id(&quot;org.springframework.boot&quot;) version &quot;4.0.0&quot;&#10;    id(&quot;io.spring.dependency-management&quot;) version &quot;1.1.7&quot;&#10;}&#10;&#10;group = &quot;com.example&quot;&#10;version = &quot;0.0.1-SNAPSHOT&quot;&#10;description = &quot;userInfoDB&quot;&#10;&#10;java {&#10;    toolchain {&#10;        languageVersion = JavaLanguageVersion.of(25)&#10;    }&#10;}&#10;&#10;repositories {&#10;    mavenCentral()&#10;}&#10;&#10;dependencies {&#10;    compileOnly(&quot;org.projectlombok:lombok&quot;)&#10;    annotationProcessor(&quot;org.projectlombok:lombok&quot;)&#10;    implementation(&quot;org.springframework.boot:spring-boot-starter-data-jpa&quot;)&#10;    runtimeOnly(&quot;org.postgresql:postgresql&quot;)&#10;    testImplementation(&quot;org.springframework.boot:spring-boot-starter-data-jpa-test&quot;)&#10;    testRuntimeOnly(&quot;org.junit.platform:junit-platform-launcher&quot;)&#10;}&#10;&#10;tasks.withType&lt;Test&gt; {&#10;    useJUnitPlatform()&#10;}&#10;" />
+              <option name="updatedContent" value="plugins {&#10;    java&#10;    id(&quot;org.springframework.boot&quot;) version &quot;3.4.1&quot;&#10;    id(&quot;io.spring.dependency-management&quot;) version &quot;1.1.7&quot;&#10;}&#10;&#10;group = &quot;com.example&quot;&#10;version = &quot;0.0.1-SNAPSHOT&quot;&#10;description = &quot;userInfoDB&quot;&#10;&#10;java {&#10;    toolchain {&#10;        languageVersion = JavaLanguageVersion.of(21)&#10;    }&#10;}&#10;&#10;repositories {&#10;    mavenCentral()&#10;}&#10;&#10;dependencies {&#10;    compileOnly(&quot;org.projectlombok:lombok&quot;)&#10;    annotationProcessor(&quot;org.projectlombok:lombok&quot;)&#10;    implementation(&quot;org.springframework.boot:spring-boot-starter-web&quot;)&#10;    implementation(&quot;org.springframework.boot:spring-boot-starter-thymeleaf&quot;)&#10;    implementation(&quot;org.springframework.boot:spring-boot-starter-data-jpa&quot;)&#10;    runtimeOnly(&quot;org.postgresql:postgresql&quot;)&#10;    testImplementation(&quot;org.springframework.boot:spring-boot-starter-test&quot;)&#10;    testRuntimeOnly(&quot;org.junit.platform:junit-platform-launcher&quot;)&#10;}&#10;&#10;tasks.withType&lt;Test&gt; {&#10;    useJUnitPlatform()&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/example/postrequest/controller/FormController.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/com/example/postrequest/controller/FormController.java" />
+              <option name="originalContent" value="package com.example.postrequest.controller;&#10;&#10;import com.example.postrequest.model.UserInfo;&#10;import org.springframework.stereotype.Controller;&#10;import org.springframework.ui.Model;&#10;import org.springframework.web.bind.annotation.GetMapping;&#10;import org.springframework.web.bind.annotation.ModelAttribute;&#10;import org.springframework.web.bind.annotation.PostMapping;&#10;&#10;@Controller&#10;public class FormController {&#10;&#10;    // Handles GET requests to /user/form (displays the blank form)&#10;    @GetMapping(&quot;/user/form&quot;)&#10;    public String showUserForm(Model model) {&#10;        // Adds an empty UserInfo object to the model for the Thymeleaf template&#10;        model.addAttribute(&quot;userInfo&quot;, new UserInfo());&#10;        return &quot;userForm&quot;; // Maps to userForm.html&#10;    }&#10;&#10;    // Handles POST requests to /user/submit (receives form data)&#10;    @PostMapping(&quot;/user/submit&quot;)&#10;    public String submitUserForm(@ModelAttribute(&quot;userInfo&quot;) UserInfo userInfo) {&#10;        // Spring binds form fields to the UserInfo object; the object is in the Model.&#10;        System.out.println(&quot;Received user info: &quot; + userInfo.toString());&#10;        return &quot;userResult&quot;; // Maps to userResult.html&#10;    }&#10;&#10;}&#10;" />
+              <option name="updatedContent" value="package com.example.postrequest.controller;&#10;&#10;import com.example.model.UserInfo;&#10;import org.springframework.stereotype.Controller;&#10;import org.springframework.ui.Model;&#10;import org.springframework.web.bind.annotation.GetMapping;&#10;import org.springframework.web.bind.annotation.ModelAttribute;&#10;import org.springframework.web.bind.annotation.PostMapping;&#10;&#10;@Controller&#10;public class FormController {&#10;&#10;    // Handles GET requests to /user/form (displays the blank form)&#10;    @GetMapping(&quot;/user/form&quot;)&#10;    public String showUserForm(Model model) {&#10;        // Adds an empty UserInfo object to the model for the Thymeleaf template&#10;        model.addAttribute(&quot;userInfo&quot;, new UserInfo());&#10;        return &quot;userForm&quot;; // Maps to userForm.html&#10;    }&#10;&#10;    // Handles POST requests to /user/submit (receives form data)&#10;    @PostMapping(&quot;/user/submit&quot;)&#10;    public String submitUserForm(@ModelAttribute(&quot;userInfo&quot;) UserInfo userInfo) {&#10;        // Spring binds form fields to the UserInfo object; the object is in the Model.&#10;        System.out.println(&quot;Received user info: &quot; + userInfo.toString());&#10;        return &quot;userResult&quot;; // Maps to userResult.html&#10;    }&#10;&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/example/repository/UserInfoRepository.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/com/example/repository/UserInfoRepository.java" />
+              <option name="originalContent" value="package com.example.repository;&#10;&#10;import com.example.model.UserInfo;&#10;import org.springframework.data.jpa.repository.JpaRepository;&#10;&#10;import java.util.List;&#10;&#10;public interface UserInfoRepository extends JpaRepository&lt;UserInfo,Long&gt; {&#10;    @Override&#10;    List&lt;UserInfo&gt; findAll();&#10;&#10;    UserInfo findUserInfoByName(String name);&#10;}&#10;" />
+              <option name="updatedContent" value="package com.example.repository;&#10;&#10;import com.example.model.UserInfo;&#10;import org.springframework.data.jpa.repository.JpaRepository;&#10;&#10;import java.util.List;&#10;&#10;public interface UserInfoRepository extends JpaRepository&lt;UserInfo,Long&gt; {&#10;    List&lt;UserInfo&gt; findAll();&#10;&#10;    UserInfo findUserInfoByName(String name);&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
