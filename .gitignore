@@ -7,3 +7,38 @@ shark Tank presentation/Communication shark tank.pdf
 
 
 BSCS 6B/Web Technologies/1_to_1/pom.xml
+
+# Ignore all build outputs
+**/target/
+**/bin/
+**/out/
+**/build/
+
+# Ignore IDE/editor files
+*.iml
+.idea/
+.vscode/
+*.classpath
+*.project
+*.settings/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Gradle/Maven wrappers (optional)
+.gradle/
+build/
+gradlew
+gradlew.bat
+gradle-wrapper.jar
+gradle-wrapper.properties
+
+# Ignore temporary files
+*.log
+*.lock
+
+# But do NOT ignore your source code and Word docs
+!**/*.java
+!**/*.docx
+
