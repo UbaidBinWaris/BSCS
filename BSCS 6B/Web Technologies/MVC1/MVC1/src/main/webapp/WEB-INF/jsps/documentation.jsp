@@ -184,13 +184,34 @@
         color: #8b949e;
         margin-top: 50px;
     }
+
+    .nav-links {
+        display: flex;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        padding: 10px 20px;
+        background-color: #238636;
+        border-radius: 6px;
+        font-weight: 500;
+        transition: background-color 0.2s;
+    }
+
+    .nav-links a:hover {
+        background-color: #2ea043;
+    }
 </style>
 </head>
 <body>
     <div class="navbar">
         <div class="container">
-            <h1>📚 Documentation</h1>
-            <a href="<%= request.getContextPath() %>/">← Back to Main Menu</a>
+            <h1>Documentation</h1>
+            <div class="nav-links">
+                <a href="<%= request.getContextPath() %>/public/deployment">Deployment</a>
+                <a href="<%= request.getContextPath() %>/public/aws_rds">AWS RDS & EC2</a>
+                <a href="<%= request.getContextPath() %>/">Back to Main Menu</a>
+            </div>
         </div>
     </div>
 

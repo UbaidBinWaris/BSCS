@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Information Result</title>
+</head>
+<body>
+<h1>User Info Submitted Successfully:</h1>
+
+<div>
+    <!-- Access individual fields using the object name 'userInfo' -->
+    <p>Name: <span th:text="${userInfo.name}">Name Placeholder</span></p>
+    <p>Email: <span th:text="${userInfo.email}">Email Placeholder</span></p>
+</div>
+
+<a href="/user/form">Submit another user</a>
+</body>
+</html>

@@ -190,10 +190,11 @@
 <body>
     <div class="navbar">
         <div class="container">
-            <h1>🚀 Deployment Guide</h1>
+            <h1>Deployment Guide</h1>
             <div class="nav-links">
-                <a href="<%= request.getContextPath() %>/public/documentation">📚 Documentation</a>
-                <a href="<%= request.getContextPath() %>/">← Main Menu</a>
+                <a href="<%= request.getContextPath() %>/public/documentation">Documentation</a>
+                <a href="<%= request.getContextPath() %>/public/aws_rds">AWS RDS & EC2</a>
+                <a href="<%= request.getContextPath() %>/">Back to Main Menu</a>
             </div>
         </div>
     </div>
