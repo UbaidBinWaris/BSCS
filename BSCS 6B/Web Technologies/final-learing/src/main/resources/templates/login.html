@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pageTitle}">Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <p>Please login to your account</p>
+
+    <div th:if="${errorMessage}">
+        <p th:text="${errorMessage}"></p>
+    </div>
+
+    <div th:if="${successMessage}">
+        <p th:text="${successMessage}"></p>
+    </div>
+
+    <form th:action="@{/user/login}" method="post">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required autofocus placeholder="Enter your username">
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <a th:href="@{/signup}">Create New Account</a>
+
+    <p>Don't have an account? <a th:href="@{/signup}">Sign up here</a></p>
+</body>
+</html>
+

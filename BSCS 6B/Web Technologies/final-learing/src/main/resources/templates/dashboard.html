@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pageTitle}">Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+
+    <form th:action="@{/user/logout}" method="post">
+        <button type="submit">Logout</button>
+    </form>
+
+    <div th:if="${successMessage}">
+        <p th:text="${successMessage}"></p>
+    </div>
+
+    <h2>Welcome to Your Dashboard!</h2>
+    <p>You have successfully logged in. This is a demo dashboard showing your user information.</p>
+
+    <h3>User Information</h3>
+
+    <p>Username: <span th:text="${session.username}">username</span></p>
+    <p>Full Name: <span th:text="${session.fullName}">Full Name</span></p>
+    <p>Role: <span th:text="${session.role}">USER</span></p>
+    <p>Status: Active</p>
+</body>
+</html>
+

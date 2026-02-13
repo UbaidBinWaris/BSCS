@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pageTitle}">Home</title>
+</head>
+<body>
+    <h1 th:text="${pageTitle}">Home</h1>
+
+    <h2>Welcome to the Application</h2>
+    <p>This is a Spring Boot application with database connection and user authentication.</p>
+    <p>The application features:</p>
+    <ul>
+        <li>H2 in-memory database</li>
+        <li>User authentication and validation</li>
+        <li>Thymeleaf templates for rendering views</li>
+        <li>Spring Security configuration</li>
+        <li>Automatic database initialization with sample data</li>
+    </ul>
+</body>
+</html>
+

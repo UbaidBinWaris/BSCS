@@ -10,11 +10,7 @@ description = 'ass4'
 
 java {
     toolchain {
-<<<<<<< HEAD
         languageVersion = JavaLanguageVersion.of(25)
-=======
-        languageVersion = JavaLanguageVersion.of(17)
->>>>>>> 82e7b981f9a282281e68af3b87564049512c36e8
     }
 }
 
